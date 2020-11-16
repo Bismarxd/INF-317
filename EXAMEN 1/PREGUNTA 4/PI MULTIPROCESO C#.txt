@@ -1,0 +1,43 @@
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+using System.Threading;
+using System.Thread;
+
+
+public class Hello{
+    public static void Main(){
+       
+      
+    
+    //CREANDO MULTIPLES HILOS
+     for (int i = 0; i<4; i++)
+    {
+   Thread num = new Thread(numero(10000));
+   num.Start();
+    }
+    
+    
+    
+        Console.WriteLine("el numero PI es:", num );
+    
+    
+        }
+    
+    static void numero(int n)
+        {
+         double sum = 0;
+            double pi = 0;
+       
+        
+    for (int i = 0; i<n; i++)
+    {
+    sum = sum + (Math.Pow(1/i, 2));
+        
+    pi = Math.Sqrt(sum*6);
+    }
+    System.Console.WriteLine(n);
+        }
+}
